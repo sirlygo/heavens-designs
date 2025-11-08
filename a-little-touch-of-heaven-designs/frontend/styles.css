@@ -84,6 +84,15 @@ nav a:focus {
   gap: 1.5rem;
 }
 
+.hero--subtle {
+  padding: clamp(4rem, 8vw, 6rem) 5vw;
+  background: linear-gradient(135deg, rgba(108, 99, 255, 0.08), rgba(255, 101, 132, 0.08));
+}
+
+.hero--success {
+  gap: 1rem;
+}
+
 .hero h2 {
   font-size: clamp(2rem, 5vw, 3rem);
   color: var(--primary);
@@ -145,9 +154,14 @@ button:hover {
   color: var(--primary);
 }
 
-.product p {
+.product-price {
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: 700;
+}
+
+.product-description {
+  font-size: 0.95rem;
+  color: rgba(45, 42, 68, 0.7);
 }
 
 .cart-container {
@@ -155,6 +169,8 @@ button:hover {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
   flex: 1;
 }
 
@@ -168,6 +184,56 @@ button:hover {
   box-shadow: 0 10px 25px rgba(45, 42, 68, 0.06);
 }
 
+.cart-item-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.qty-btn {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 999px;
+  background: var(--white);
+  border: 1px solid rgba(108, 99, 255, 0.35);
+  color: var(--primary);
+  font-size: 1.15rem;
+  font-weight: 700;
+  transition: background 0.2s ease, color 0.2s ease, border 0.2s ease;
+}
+
+.qty-btn:hover,
+.qty-btn:focus {
+  background: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
+}
+
+.cart-item-qty {
+  min-width: 2rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.remove-btn {
+  background: rgba(255, 101, 132, 0.12);
+  color: var(--accent);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.remove-btn:hover,
+.remove-btn:focus {
+  background: rgba(255, 101, 132, 0.2);
+  transform: translateY(-1px);
+}
+
 #cart-summary {
   display: flex;
   flex-wrap: wrap;
@@ -177,6 +243,50 @@ button:hover {
   background: rgba(108, 99, 255, 0.08);
   padding: 1.25rem;
   border-radius: 1rem;
+}
+
+.checkout-options {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+}
+
+.checkout-note,
+.payment-helper {
+  font-size: 0.95rem;
+  color: rgba(45, 42, 68, 0.7);
+}
+
+.empty-cart {
+  text-align: center;
+  color: rgba(45, 42, 68, 0.7);
+}
+
+.empty-products {
+  text-align: center;
+  color: rgba(45, 42, 68, 0.7);
+  padding: 2rem 0;
+}
+
+.noscript-warning {
+  background: rgba(255, 101, 132, 0.12);
+  color: var(--accent);
+  padding: 1rem;
+  border-radius: 0.75rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.empty-cart a {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.empty-cart a:hover,
+.empty-cart a:focus {
+  text-decoration: underline;
 }
 
 .contact-form {
@@ -245,6 +355,10 @@ footer {
     gap: 0.75rem;
   }
 
+  .cart-item-controls {
+    justify-content: flex-start;
+  }
+
   #cart-summary {
     flex-direction: column;
     align-items: flex-start;
@@ -270,4 +384,12 @@ footer {
 .toast.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+button[disabled],
+.btn[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
 }

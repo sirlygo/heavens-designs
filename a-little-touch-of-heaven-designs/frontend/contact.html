@@ -8,7 +8,7 @@
 </head>
 <body>
   <header>
-    <h1>Contact Us</h1>
+    <h1><a href="index.html">A Little Touch of Heaven Designs</a></h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="shop.html">Shop</a>
@@ -17,18 +17,21 @@
     </nav>
   </header>
 
-  <section class="contact-form">
+  <main class="contact-form">
     <h2>Get in Touch</h2>
     <form>
-      <label>Name:</label>
-      <input type="text" required>
-      <label>Email:</label>
-      <input type="email" required>
-      <label>Message:</label>
-      <textarea required></textarea>
+      <label for="contact-name">Name:</label>
+      <input id="contact-name" type="text" name="name" required>
+
+      <label for="contact-email">Email:</label>
+      <input id="contact-email" type="email" name="email" required>
+
+      <label for="contact-message">Message:</label>
+      <textarea id="contact-message" name="message" required></textarea>
+
       <button type="submit">Send Message</button>
     </form>
-  </section>
+  </main>
 
   <footer>
     <p>© 2025 A Little Touch of Heaven Designs</p>
