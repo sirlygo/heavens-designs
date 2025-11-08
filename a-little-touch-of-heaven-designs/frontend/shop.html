@@ -8,7 +8,7 @@
 </head>
 <body>
   <header>
-    <h1>Our Shop</h1>
+    <h1><a href="index.html">A Little Touch of Heaven Designs</a></h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="shop.html">Shop</a>
@@ -17,26 +17,87 @@
     </nav>
   </header>
 
-  <section class="products">
-    <div class="product">
-      <img src="https://via.placeholder.com/200" alt="Custom Shirt">
-      <h3>Custom Shirt</h3>
-      <p>$20</p>
-      <button onclick="addToCart('Custom Shirt', 20)">Add to Cart</button>
-    </div>
-    <div class="product">
-      <img src="https://via.placeholder.com/200" alt="Custom Hoodie">
-      <h3>Custom Hoodie</h3>
-      <p>$35</p>
-      <button onclick="addToCart('Custom Hoodie', 35)">Add to Cart</button>
-    </div>
-    <div class="product">
-      <img src="https://via.placeholder.com/200" alt="Custom Tote Bag">
-      <h3>Custom Tote Bag</h3>
-      <p>$15</p>
-      <button onclick="addToCart('Custom Tote Bag', 15)">Add to Cart</button>
-    </div>
-  </section>
+  <main>
+    <section class="hero hero--subtle">
+      <h2>Shop Our Custom Vinyl Creations</h2>
+      <p>From one-off gifts to team orders, every piece is finished with premium heat-transfer vinyl.</p>
+    </section>
+
+    <script type="application/json" id="product-data">
+      [
+        {
+          "id": "custom-shirt",
+          "name": "Custom Shirt",
+          "price": 20,
+          "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80",
+          "description": "Soft cotton tees with your artwork pressed in vibrant colors."
+        },
+        {
+          "id": "custom-hoodie",
+          "name": "Custom Hoodie",
+          "price": 35,
+          "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80",
+          "description": "Cozy fleece hoodies personalized for gifts, teams, or events."
+        },
+        {
+          "id": "custom-tote",
+          "name": "Custom Tote Bag",
+          "price": 15,
+          "image": "https://images.unsplash.com/photo-1503342452485-86eb59083b47?auto=format&fit=crop&w=600&q=80",
+          "description": "Reusable totes ready for monograms, quotes, and bold graphics."
+        },
+        {
+          "id": "custom-apron",
+          "name": "Custom Apron",
+          "price": 28,
+          "image": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80",
+          "description": "Aprons for makers and bakers finished with durable vinyl art."
+        },
+        {
+          "id": "vinyl-sticker-pack",
+          "name": "Vinyl Sticker Pack",
+          "price": 12,
+          "image": "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=600&q=80",
+          "description": "A bundle of custom die-cut stickers for laptops, bottles, and more."
+        }
+      ]
+    </script>
+
+    <section class="products" data-products-grid>
+      <noscript>
+        <article class="product">
+          <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80" alt="Custom Shirt">
+          <h3>Custom Shirt</h3>
+          <p class="product-price">$20.00</p>
+          <p class="product-description">Soft cotton tees with your artwork pressed in vibrant colors.</p>
+        </article>
+        <article class="product">
+          <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80" alt="Custom Hoodie">
+          <h3>Custom Hoodie</h3>
+          <p class="product-price">$35.00</p>
+          <p class="product-description">Cozy fleece hoodies personalized for gifts, teams, or events.</p>
+        </article>
+        <article class="product">
+          <img src="https://images.unsplash.com/photo-1503342452485-86eb59083b47?auto=format&fit=crop&w=600&q=80" alt="Custom Tote Bag">
+          <h3>Custom Tote Bag</h3>
+          <p class="product-price">$15.00</p>
+          <p class="product-description">Reusable totes ready for monograms, quotes, and bold graphics.</p>
+        </article>
+        <article class="product">
+          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80" alt="Custom Apron">
+          <h3>Custom Apron</h3>
+          <p class="product-price">$28.00</p>
+          <p class="product-description">Aprons for makers and bakers finished with durable vinyl art.</p>
+        </article>
+        <article class="product">
+          <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=600&q=80" alt="Vinyl Sticker Pack">
+          <h3>Vinyl Sticker Pack</h3>
+          <p class="product-price">$12.00</p>
+          <p class="product-description">A bundle of custom die-cut stickers for laptops, bottles, and more.</p>
+        </article>
+      </noscript>
+    </section>
+  </main>
 
   <footer>
     <p>© 2025 A Little Touch of Heaven Designs</p>
